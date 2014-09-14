@@ -1,0 +1,78 @@
+        <!-- Page Title -->
+        <div class="page-title">
+            <div class="container">
+                <div class="row">
+                    <div class="span6">
+                        <i class="icon-camera page-title-icon"></i>
+                        <h2>Nos Références</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio -->
+        <div class="portfolio portfolio-page container">
+            <div class="row">
+                <ul class="portfolio-img">
+					%%REPEAT_BEGIN_GALLERY_%%
+                    <li data-id="p-" data-type="web-design" data-filter="%%CATEGORYID%%" class="span3">
+                        <div class="work" style="padding-bottom:0px;margin-top:20px;">
+                            <a href="%%LIEN%%" title="%%TITLE%% : %%DESCRIPTION%%">
+                                <img src="%%PICTURE%%" alt="%%TITLE%%">
+                            </a>
+                            <div class="caption">
+								<h4>%%TITLE%%</h4>
+								<div class="more"><a href="%%LIEN%%">Plus d'informations</a></div>
+							</div>
+                        </div>
+                    </li>
+					%%REPEAT_END_GALLERY_%%
+                </ul>
+            </div>
+        </div>
+		<style>
+			span.button{
+				cursor:pointer;
+				padding:5px;
+				padding-right:10px;
+				padding-left:10px;
+				background:rgba(5,5,5,0.2);
+			}
+			.work{
+				overflow:hidden;height:200px;
+			}
+			.work .caption{
+				background:rgb(0,0,0);
+				opacity:0.6;
+  				filter: alpha(opacity = 60);
+				padding:5px;padding-bottom:10px;position:relative;
+				height:65px;width:100%;text-align:left;
+			}
+			.work .caption .more{text-align:right;}
+			.work .caption .more a, .work .caption h4{color:#ddd;}
+			.work .caption .more a : hover{color:#5d5d5d;}
+		</style>
+		<script>
+			jQuery("select[name='filtrer_choix']").change(function(){
+				value=jQuery(this).val();
+				if(value=="all"){
+					jQuery(".portfolio-img li").each(function(){
+						jQuery(this).show();
+					});
+				}else{
+					jQuery(".portfolio-img li").each(function(){
+						if(value==jQuery(this).attr("data-filter"))jQuery(this).fadeIn();
+						else jQuery(this).hide();
+					});
+				}
+			});
+			jQuery(".work")
+				.mouseenter(function(){
+					jQuery(this).children(".caption")
+						.animate({top:"-75px"},100);
+				})
+				.mouseleave(function(){
+					jQuery(this).children(".caption")
+						.animate({top:"0px"},100);
+				});
+		</script>

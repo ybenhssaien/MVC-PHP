@@ -1,0 +1,111 @@
+	<div class="slider">
+            <div class="container">
+                <div class="row">
+                    <div class="span10 offset1">
+                        <div class="flexslider">
+                            <ul class="slides">
+								%%REPEAT_BEGIN_PRODUCTS_%%
+								<li data-thumb="%%PICTURE%%">
+									<img src="%%PICTURE%%" width="240" height="115">
+									<p class="flex-caption">%%DESCRIPTION%%</p>
+								</li>
+								%%REPEAT_END_PRODUCTS_%%
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Site Description -->
+        <div class="presentation container">
+			<h2>نحن <span class="violet">أرينالوب</span> شركة مختصة في إنشاء الأثاثات المنزلية الخشبية</h2>
+            <p>نقوم بإنشاء أجمل الأثاثات المنزلية بالذوق العصري و المتانة بأثمنة مناسبة.</p>
+        </div>
+
+        <!-- Services -->
+        <div class="what-we-do container">
+            <div class="row">
+                <div class="service span3">
+                    <div class="icon-awesome">
+                        <i class="icon-eye-open"></i>
+                    </div>
+                    <h4>إتقان في العمل</h4>
+                    <p>دعونا نرى ما يحب أو يرغب أو يسعى الألم، ولكن بسبب الظروف في بعض الأحيان تحدث فيها الكدح و...</p>
+                    <a href="%%INDEX%%services">المزيد</a>
+                </div>
+                <div class="service span3">
+                    <div class="icon-awesome">
+                        <i class="icon-table"></i>
+                    </div>
+                    <h4>أثاث منزلي رفيع</h4>
+                    <p>دعونا نرى ما يحب أو يرغب أو يسعى الألم، ولكن بسبب الظروف في بعض الأحيان تحدث فيها الكدح و...</p>
+                    <a href="%%INDEX%%services">المزيد</a>
+                </div>
+                <div class="service span3">
+                    <div class="icon-awesome">
+                        <i class="icon-magic"></i>
+                    </div>
+                    <h4>متانة و جمالية</h4>
+                    <p>دعونا نرى ما يحب أو يرغب أو يسعى الألم، ولكن بسبب الظروف في بعض الأحيان تحدث فيها الكدح و...</p>
+                    <a href="%%INDEX%%services">المزيد</a>
+                </div>
+                <div class="service span3">
+                    <div class="icon-awesome">
+                        <i class="icon-print"></i>
+                    </div>
+                    <h4>حداثة في منتواجاتنا</h4>
+                    <p>دعونا نرى ما يحب أو يرغب أو يسعى الألم، ولكن بسبب الظروف في بعض الأحيان تحدث فيها الكدح و...</p>
+                    <a href="%%INDEX%%services">المزيد</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Latest Work -->
+        <div class="portfolio container">
+            <div class="portfolio-title">
+                <h3>آخر إنجازاتنا</h3>
+            </div>
+            <div class="row">
+				%%REPEAT_BEGIN_GALLERY_%%
+                <div class="work span3">
+                    <img src="%%PICTURE%%" alt="">
+                    <h4>%%NAME%%</h4>
+                    <p>%%DESCRIPTION%%...</p>
+                    <div class="icon-awesome">
+                        <a href="%%INDEX%%portfolio" rel="prettyPhoto"><i class="icon-search"></i></a>
+                        <a href="%%INDEX%%portfolio"><i class="icon-link"></i></a>
+                    </div>
+                </div>
+				%%REPEAT_END_GALLERY_%%
+            </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="testimonials container">
+            <div class="testimonials-title">
+                <h3>شهادات في حقنا</h3>
+            </div>
+            <div class="row">
+                <div class="testimonial-list span12">
+                    <div class="tabbable tabs-below">
+                        <div class="tab-content">
+							%%REPEAT_BEGIN_IMPROVE_%%
+                            <div class="tab-pane" id="%%ID%%">
+                                <img src="%%PICTURE%%" title="%%NAME%%" alt="%%NAME%%" style="width:58px;height:58px">
+                                <p>"%%CONTENT%%..."<br /><span class="violet">%%NAME%%</span></p>
+                            </div>
+							%%REPEAT_END_IMPROVE_%%
+                        </div>
+                       <ul class="nav nav-tabs">
+							%%REPEAT_BEGIN_IMPROVE1_%%
+                           <li class=""><a href="#%%ID%%" data-toggle="tab"></a></li>
+						   %%REPEAT_END_IMPROVE1_%%
+                       </ul>
+					   <script>
+						jQuery(".tab-pane:first,.nav-tabs li:first").addClass("active");
+					   </script>
+                   </div>
+                </div>
+            </div>
+        </div>

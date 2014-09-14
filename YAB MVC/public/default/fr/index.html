@@ -1,0 +1,60 @@
+		<div id="slider1_container" style="position:relative;left:100px;top:20px; height: 500px;margin:auto">
+			<!-- Slides Container -->
+			<div u="slides" style="cursor: move;position:relative;left:0px;top:0px; height: 500px;">
+				%%REPEAT_BEGIN_SLIDE_%%
+				<div><img src="%%PICTURE%%" u="image" alt="" /></div>
+				%%REPEAT_END_SLIDE_%%
+				<div u="navigator" class="jssorb21" style="position: absolute; bottom: 26px; left: 100px; height: 19px;">
+					<div u="prototype" style="position: absolute; width: 19px; height: 19px;" class=""></div>
+				</div>
+				<span u="arrowleft" class="jssora21l" style="width: 55px; height: 55px; top: 222.5px; left: 8px; "></span>
+				<span u="arrowright" class="jssora21r" style="width: 55px; height: 55px; top: 222.5px; right: 8px; "></span>
+			</div>
+		<script type="text/javascript" src="%%HTTP_URL%%%%PLUGINS_DIR%%jssorslider/js/jssor.slider.mini.js"></script>
+		<script type="text/javascript" src="%%HTTP_URL%%%%DESIGN_DIR%%js/index.js"></script>
+		<link  type="text/css" rel="stylesheet" href="%%HTTP_URL%%%%PLUGINS_DIR%%jssorslider/css/style.css" />
+		</div>
+
+        <!-- Site Description -->
+        <div class="presentation container">
+            <h2><span class="violet">Arenalub</span>, Entreprise spécialisée dans le bois et les pergolas</h2>
+            <p>Au plaisir de vous accueillir et vous servir.</p>
+        </div>
+		<div class="presentation container" style="text-align:center;width:70%;margin:auto">
+			<hr />
+			<p style="background:#f8f8f8;padding:10px">
+				Conscients que notre devoir est de sécuriser nos clients et ayant comme objectif de les fidéliser en leur donnant confiance dans notre organisation.
+				Nous évitons l'utilisation de tout produit non-conforme à l'usage prévu dans le domaine et nous vous offrons des produits certifiés.
+				<p style="text-align:center"> 
+					<img src="%%HTTP_URL%%upload/web/images/about/certification.jpg" alt="" style="width:200px;height:50px" />
+				</p> 
+			</p>
+			<hr />
+		</div>
+        <!-- Services -->
+        <div class="what-we-do container">
+            <div class="row" style="width:80%;margin:auto">
+				%%REPEAT_BEGIN_CATEGORY_%%
+				<div class="service span3">
+						<div style="height:220px">
+							<div class="icon-awesome">
+								<!--<i class="icon-eye-open"></i>-->
+								<img src="%%LOGO%%" style="width:60px;height:60px" alt="%%NAME%%" />
+							</div>
+							<h4>%%NAME%%</h4>
+							<p>%%DESCRIPTION%%</p>
+						</div>
+						<a href="%%CATEGORY_URL%%">Plus de détails</a>
+					</div>
+				%%REPEAT_END_CATEGORY_%%
+            </div>
+        </div>
+        
+	<script language="javascript">
+		element=jQuery("div[class*='service'");
+		if(element){
+			children=element.children("div");
+			p=children.children("p");
+			children.each(function(){jQuery(this).css("height",(parseInt(p.css("height"))+parseInt(p.css("padding-bottom"))+100));})
+		}
+	</script>
