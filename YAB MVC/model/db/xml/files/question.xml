@@ -1,8 +1,0 @@
-<questions>
-	<question type="fiche" name="sante">
-		<response label="oui" value="" type="radio" />
-		<response label="non" value="" type="radio" />
-		<response label="Ou ajouter nouveaux informations" value="" type="text" />
-		<label>Avez vous étes repérer .... ?</label>
-	</question>
-</questions>
